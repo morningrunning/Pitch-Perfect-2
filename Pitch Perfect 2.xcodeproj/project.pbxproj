@@ -69,7 +69,7 @@
 		760D157C1C7FEE780064ABDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		760D15881C7FFA250064ABDA /* PlaySoundsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaySoundsViewController.swift; sourceTree = "<group>"; };
 		760D158A1C7FFC5B0064ABDA /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		760D158C1C7FFCB40064ABDA /* movie_quote.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = movie_quote.mp3; path = /Users/ronaldmorgan/Desktop/movie_quote.mp3; sourceTree = "<absolute>"; };
+		760D158C1C7FFCB40064ABDA /* movie_quote.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = movie_quote.mp3; path = "/Users/ronaldmorgan/Desktop/Pitch Perfect 2/movie_quote.mp3"; sourceTree = "<absolute>"; };
 		760D15911C853CB00064ABDA /* RecordedAudio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordedAudio.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
