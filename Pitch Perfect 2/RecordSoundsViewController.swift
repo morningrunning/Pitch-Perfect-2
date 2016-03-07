@@ -33,6 +33,8 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     }
     
     override func viewWillAppear(animated: Bool) {
+        recordingInProgress.text = "Tap to Record"
+        recordingInProgress.hidden = false
         stopButton.hidden = true
         recordButton.enabled = true
     }
@@ -40,6 +42,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     @IBAction func recordAudio(sender: UIButton) {
         print("in recordAudio")
         recordingInProgress.hidden = false
+        recordingInProgress.text = "Recording"
         stopButton.hidden = false
         recordButton.enabled = false
         
@@ -85,7 +88,6 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     }
     
     @IBAction func stopAudio(sender: UIButton) {
-        recordingInProgress.text = "Tap to Record"
         audioRecorder.stop()
         recordButton.enabled = true
         stopButton.enabled = false
