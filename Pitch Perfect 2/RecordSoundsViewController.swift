@@ -21,17 +21,6 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     var recordedAudio:RecordedAudio!
     
     
-    
-    override func viewDidLoad() {
-    super.viewDidLoad()
-       
-    }
-
-    override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-       
-    }
-    
     override func viewWillAppear(animated: Bool) {
         recordingInProgress.text = "Tap to Record"
         recordingInProgress.hidden = false
@@ -67,9 +56,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     func audioRecorderDidFinishRecording(recorder: AVAudioRecorder, successfully flag: Bool) {
         if(flag) {
         recordedAudio = RecordedAudio(filePathUrl: recorder.url, title: recorder.url.lastPathComponent)
-        recordedAudio.filePathUrl = recorder.url
-        recordedAudio.title = recorder.url.lastPathComponent
-            self.performSegueWithIdentifier("stopRecording", sender: recordedAudio)
+        self.performSegueWithIdentifier("stopRecording", sender: recordedAudio)
         }else{
             print("Recording was not successful")
             recordButton.enabled = true
@@ -91,6 +78,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         audioRecorder.stop()
         recordButton.enabled = true
         stopButton.enabled = false
+        audioRecorder.pause()
         let audioSession = AVAudioSession.sharedInstance()
         try! audioSession.setActive(false)
     }
