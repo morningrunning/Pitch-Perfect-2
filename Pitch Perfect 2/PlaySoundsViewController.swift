@@ -49,11 +49,13 @@ class PlaySoundsViewController: UIViewController {
     @IBAction func playSlowAudio(sender: UIButton) {
         audioPlayer.rate = 0.5
         playAudio()
+       
     }
 
     @IBAction func playFastAudio(sender: UIButton) {
         audioPlayer.rate = 1.5
         playAudio()
+        
     }
     
     
@@ -64,10 +66,12 @@ class PlaySoundsViewController: UIViewController {
     
     @IBAction func playChipmunkAudio(sender: UIButton) {
         playAudioWithVariablePitch(1000)
+        
     }
     
     @IBAction func playDarthvaderAudio(sender: UIButton) {
         playAudioWithVariablePitch(-1000)
+        
     }
     
     func playAudioWithVariablePitch(pitch: Float){
